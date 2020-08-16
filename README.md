@@ -6,3 +6,4 @@ A Fashion/Model Website used for pratice on javaScript animation library Gsap.js
 ##GSAP.js
 ##Vanilla js
 ##scrolltrigger
+##happy tweening!!
