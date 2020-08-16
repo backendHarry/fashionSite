@@ -1,0 +1,16 @@
+small devices
+
+@media (min-width:576px) {.....
+
+
+medium devices 
+
+@media (min-width:768px) {....
+
+large devices like desktops 
+
+@media (min-width:992px) {...
+
+extra large like large devices 
+
+@media (min-width:1200px) {....

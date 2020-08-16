@@ -1,0 +1,548 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-size:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+img{
+    width:5rem;
+    height:5rem;
+}
+
+a{
+    text-decoration:none;
+}
+
+h1::selection, h2::selection, h3::selection, p::selection{
+    background:none;
+    pointer-events:none;
+}
+
+/* loaders */
+
+.first-loader{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    top:0;
+    right:0;
+    z-index:50;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.loaders{
+    background:#AC5858;
+}
+
+/* end loader */
+
+/* nav */
+
+.nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:100%;
+    height:100%;
+    background-color:#272727;
+    z-index:1000;
+    color:white;
+    overflow:hidden;
+    overflow-Y:hidden;
+    transition:right 0.5s ease-in;
+}
+
+
+.nav .container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    text-decoration:none;
+    list-style: none;
+}
+
+.list-item{
+    font-size:1rem;
+    margin:2rem 0;
+    padding:0.5rem 0;
+    position:relative;
+    cursor:pointer;
+}
+
+.list-item::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:4px;
+    bottom:0;
+    left:0;
+    transform-origin:left;
+    transition:all 0.5s ease-in-out;
+}
+
+.list-item:hover::after{
+    background:#AC5858;
+    width:100%;
+}
+
+.nav i {
+    position:absolute;
+    font-size:2rem;
+    right:1rem;
+    top:1rem;
+    cursor:pointer;
+}
+
+/* end nav  */
+
+
+main{
+
+    position:relative;
+    height:100%;
+    overflow:hidden;
+    scroll-behavior: smooth;
+}
+
+section{
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.intro::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:rgba(0,0,0,0.7);
+    height:100%;
+    width:100%;
+    z-index:-100;
+}
+
+
+
+.intro{
+    background:url('backgroundCover.jpg') no-repeat center center fixed;
+    background-size:cover;
+    position:relative;
+    z-index:0;
+}
+
+.container{
+    width:95%;
+    margin:auto;
+    position:relative;
+}
+
+
+.lines-design > div {
+    position:fixed;
+    height:2rem;
+    width:0.3rem;
+    background-color: #AC5858;
+    top:50vh;
+    transform:translateY(-50%);
+    z-index:100;
+}
+
+.left{
+    left:1rem;
+}
+
+.right{
+    right:1rem;
+}
+
+/* end  */
+
+.header{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height:7rem;
+    position:fixed;
+    width:inherit;
+    z-index:100;
+}
+
+.hamburger{
+    color:white;
+    font-size:1.5rem;
+    cursor: pointer;
+}
+
+/* handler for texts and extras p */
+
+.layouts {
+    position:absolute;
+    top:50vh;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:1;
+}
+
+.layouts h1{
+    font-size:5rem;
+    -webkit-text-stroke: 2px rgba(172, 88, 88, 0.5);
+    -webkit-text-fill-color: transparent;
+    color:rgba(172, 88, 88, 0.5);
+    font-weight:900;
+    position:relative;
+    z-index:-5;
+    opacity:0;
+}
+
+.vid-section .layouts h1{
+    opacity:1;
+}
+
+.vid-section .layouts h2{
+    opacity:1;
+}
+
+.paragraph {
+    color:white;
+    font-size:1rem;
+    position: absolute;
+    font-weight: 500;
+    font-family: monospace;
+    font-style:italic;
+    z-index:2;
+
+}
+
+.first{
+    top:1rem;
+    left:0;
+    opacity:1;
+}
+
+.second{
+    top:15rem;
+    font-size:0.8rem;
+    font-weight:700;
+    opacity:1;
+}
+
+.layouts h2{
+    font-size:4rem;
+    float:right;
+    margin-top:1rem;
+    -webkit-text-stroke: 2px #AC5858;
+    -webkit-text-fill-color: transparent;
+    color:rgba(172, 88, 88, 0.6);
+    z-index:-5;
+    opacity:0;
+}
+
+/* for tracking current section */
+.tracker {
+    display:flex;
+    position: fixed;
+    bottom:2rem;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:100;
+
+}
+
+.tracker div{
+    border-radius:50%;
+    height:1rem;
+    width:1rem;
+    margin:0 0.3rem;
+    border:2px solid #AC5858;
+    cursor: pointer;
+}
+
+.current{
+    background:#AC5858;
+}
+
+
+/* call to action */
+
+.cta{
+    position:fixed;
+    left:1rem;
+    bottom:10%;
+    z-index:100;
+}
+
+.cta-btn{
+    padding:0.5rem 1rem;
+    color:white;
+    border:2px solid #AC5858;
+    background:transparent;
+    border-radius:2rem;
+    outline:none;
+    font-size:1rem;
+    letter-spacing:1.5px;
+    line-height:1rem;
+    transition: .3s all ease-in-out;
+}
+
+.cta-btn:hover{
+    background:#AC5858;
+    border:none;
+}
+
+
+/* section 2 */
+
+.vid-section{
+    position:relative;
+    overflow:hidden;
+}
+
+.video-background::before{
+    content:'';
+    position:absolute;
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+}
+
+.video-background{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+}
+
+
+.vid{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.toggle-btn{
+    width:50%;
+    margin-top:6rem;
+    text-align:center;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.toggle-btn button{
+    color:#AC5858;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0.5rem;
+    border-radius:5rem;
+    outline:none;
+    transition:all 0.5s ease-out;
+    border:none;
+    cursor:pointer;
+}
+
+.toggle-text{
+    font-size:1rem;
+}
+
+.toggle-id{
+    background:white;
+    width:1rem;
+    height:1rem;
+    border-radius:50%;
+    border:2px solid #AC5858;
+}
+
+.perm{
+    color:white;
+    margin-top:0.5rem;
+    font-size:1rem;
+}
+
+.toggle-btn button:hover{
+    background:rgb(235, 148, 148);
+    border:none;
+    outline:none
+}
+
+/* gallery section  */
+
+.gallery::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:rgba(0,0,0,0.5);
+    height:100%;
+    width:300%;
+    z-index:1;
+}
+
+
+.gallery{
+
+    position:relative;
+    width:100vw;
+    overflow:hidden;
+    scroll-behavior: smooth;
+    display:grid;
+    grid-template-columns: repeat(3, 100%);
+
+}
+
+.gallery > div{
+    width:100%;
+    height:100%;
+}
+
+.gallery img{
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+    object-position: center;
+} 
+
+.gallery{
+    position:relative;
+}
+
+.animate-gallery{
+    position: absolute;
+    width:100%;
+    bottom:0%;
+    left:50%;
+    transform: translate(-50%, 5%);
+    z-index:50;
+    color:white;
+    font-size:0.5rem;
+    text-align:center;
+}
+
+
+
+/* media queries for desktop view */
+
+
+@media (min-width:992px){
+ 
+    img{
+        width:7rem;
+        height:6rem;
+    }
+    
+    /* design bars for containers fit */
+    
+    .left{
+        left:2rem;
+    }
+    
+    .right{
+        right:2rem;
+    }
+    
+    
+    /* end  */
+
+    .nav .container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .layouts h1{
+        font-size:17rem;
+        transform: rotate(-5deg);
+    }
+    
+    .paragraph {
+        font-size:1.5rem;
+        font-weight: 600;
+    
+    }
+
+
+    .second{
+        top:initial;
+        font-size:1rem;
+        font-weight:700;
+    }
+    
+    .layouts h2{
+        font-size:7rem;
+        margin-top:-5rem;
+    }
+    
+    
+    /* for tracking current section */
+    .tracker div{
+        height:1.5rem;
+        width:1.5rem;
+    }
+
+    /* call to action */
+
+    .cta{
+        left:10rem;
+        bottom:10%;
+    }
+
+    .cta-btn{
+        padding:1rem 1rem;
+    }
+
+    .cta-btn:hover{
+        background:#AC5858;
+        border:none;
+    }
+
+    /* section 2 */
+
+    .video-background{
+        position:absolute;
+        height:100%;
+        width:100%;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+    }
+    
+    .video-background::before{
+        content:'';
+        position:absolute;
+        background:rgba(0,0,0,0.7);
+        width:100%;
+        height:100%;
+    }
+    
+    .vid{
+        height:100%;
+        width:100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .toggle-btn{
+        width:20%;
+        margin-top:0rem;
+    }
+
+
+}

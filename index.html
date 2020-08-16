@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>fashion</title>
+</head>
+<body>
+
+    <!-- loaders -->
+
+        <div class="first-loader">
+            <div class="loaders load1"></div>
+            <div class="loaders load2"></div>
+            <div class="loaders load3"></div>
+        </div>
+
+    <!-- end loader -->
+
+
+    <!-- nav Bar -->
+    <div class="nav ">
+        <i class=" fas fa-times"></i>
+        <div class="container">
+            <li class="list-item">Fashion Gallery</li>
+            <li class="list-item">Fashion Blog</li>
+            <li class="list-item">Fashion Models</li>
+            <li class="list-item">Contact Us</li>
+        </div>
+    </div>
+
+    <!-- end nav -->
+
+    <!-- container to contain all elements -->
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="mediaFiles/logo.png">
+            </div>
+
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- unnecessary styling for designs -->
+
+    <div class="lines-design">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <!-- 3 trackers to help users navigate with click -->
+
+    <div class="tracker">
+        <div class="trackerBtn current"></div>
+        <div class="trackerBtn"></div>
+        <div class="trackerBtn"></div>
+    </div>
+
+    <!-- end -->
+
+    <!-- call to action  -->
+    <div class="cta">
+        <button class="cta-btn">contact us</button>
+    </div>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                
+                <div class="layouts">
+                    <h1 class="bend-text">Fashion</h1>
+                    <h2 class="sub-text">Awesome</h2>
+                    <p class="first paragraph">Just a brand for fashion....</p>
+                    <p class="second paragraph">We Love everthing fashion and we hope you do</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="vid-section">
+
+            <div class="video-background">
+                <video src="mediaFiles/video.mp4" class="vid"></video>
+            </div>
+
+            <div class="layouts">
+
+                <h1 class="bend-text">Fashion</h1>
+                <h2 class="sub-text">Awesome</h2>
+
+                <div class="toggle-btn">
+                    <button>
+                        <div class="toggle-text">Video</div>
+                        <div class="toggle-id"></div>
+                    </button>
+                    <p class="perm">Toggle to play video..</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="gallery">
+
+            <!-- panels for gallery with left and right buttons-->
+
+            <div class="gallery1 panel">
+                
+                <div class="gallery-img">
+                    <img src="mediaFiles/gallery1.jpg" class="cur-img">
+                </div>
+
+            </div>
+
+            <div class="gallery2 panel">
+
+                <div class="gallery-img">
+                    <img src="mediaFiles/gallery2.jpg">
+                </div>
+
+            </div>
+
+            <div class="gallery3 panel">
+
+                <div class="gallery-img">
+                    <img src="mediaFiles/gallery3.jpg">
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- animation div for gallery to tell users what to do-->
+
+        <div class="animate-gallery">
+            <h1 class="hide"><span class="text">click left</span>
+                <span class="text">or</span>
+                <span class="text">right keys</span>
+                <span class="text">to slide gallery </span>
+            </h1 c>
+        </div>
+
+    </main>
+
+
+  
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
